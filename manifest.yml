@@ -1,0 +1,16 @@
+---
+applications:
+- name: phasernginx
+  memory: 256M
+  services:
+  - k5-iaas-mongo-db
+- name: phaser-nginx
+  memory: 128M
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  path: /
+  env:
+    APP_CONFIG: http://phasernginx.uk-1.cf-app.net
+    APP_ROOT: /
+
+
+
